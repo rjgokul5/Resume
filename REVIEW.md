@@ -1,6 +1,14 @@
 # Portfolio review — 7 October 2026
 
-Reviewed the source, CV content, visual layout, browser behavior, accessibility, bundle output, dependencies, print styles, and GitHub Pages configuration. The site remains local and unpublished.
+The initial review covered the source, CV content, visual layout, browser behavior, accessibility, bundle output, dependencies, print styles, and GitHub Pages configuration. At that point, the site was local and unpublished; the subsequent deployment and landscape review are recorded below.
+
+## Desktop landscape follow-up
+
+After the initial review, GitHub Pages was switched to the build workflow and the site was published. A further review in response to the user's Chrome/QHD feedback found that the 1240px content cap left too much empty space on wide monitors, the fixed hero height pushed important controls below shorter laptop windows, and stacked dialogs wasted desktop width.
+
+The desktop layout now grows to 1760px with shared header/content alignment, larger QHD typography and scene sizing, height-aware spacing for shorter windows, and side-by-side project dialogs. The dialog close control remains available when its content scrolls. Mobile and enlarged-text layouts remain covered by the regression suite.
+
+Verified with separate automated sessions in the installed Chrome and Microsoft Edge browsers at 1024×600, 1280×720, 1366×640, 1440×900, 1536×730, 1920×900, 2048×1050, 2560×1320, and 3440×1440. These are browser-content viewport sizes, including representative QHD desktop and display-scaled layouts. The complete production-build regression suite now has **16 passing tests**. Testing in Safari/Firefox and physical mobile devices remains separate.
 
 ## Assessment
 

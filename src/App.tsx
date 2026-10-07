@@ -40,11 +40,12 @@ function ProjectDialog({ project, onClose }: { project: Project | null; onClose:
     if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) onClose();
   }}>
     {project && <>
-      <button className="dialog-close icon-button" onClick={onClose} aria-label="Close project"><X size={22} /></button>
+      <div className="dialog-toolbar"><button className="dialog-close icon-button" onClick={onClose} aria-label="Close project"><X size={22} /></button></div>
+      <div className="dialog-layout">
       <ProjectArt project={project} />
       <div className="dialog-content"><span className="eyebrow">{project.category}</span><h2 id="project-dialog-title">{project.name}</h2><p className="dialog-role">{project.role}</p><p>{project.details}</p><div className="tags">{project.technologies.map(t => <span key={t}>{t}</span>)}</div><p className="platform"><Box size={16} />{project.platform}</p>
         <a className="button button-primary" href={project.videoUrl || profile.links.portfolio} target="_blank" rel="noreferrer"><Play size={16} />{project.videoUrl ? 'Watch project video' : 'Explore portfolio playlist'}<ExternalLink size={15} /></a>
-      </div>
+      </div></div>
     </>}
   </dialog>;
 }
