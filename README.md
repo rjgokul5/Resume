@@ -46,4 +46,6 @@ The checks run against the production build, including under `/Resume/`, and cov
 
 The expanded review checks also cover automated accessibility, 200% text enlargement, keyboard focus, 3D context loss, drag interaction, touch scrolling, and the summary available without JavaScript. See `REVIEW.md` for findings and remaining release checks.
 
+Landscape checks cover shorter laptop windows, QHD and scaled desktop width, and project-dialog controls while scrolling.
+
 After GitHub Pages is configured, pushes to `Master` trigger the deployment workflow.
